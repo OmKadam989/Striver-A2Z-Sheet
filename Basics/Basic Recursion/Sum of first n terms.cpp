@@ -1,8 +1,6 @@
 /* Problem link:
    https://www.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1
-*/
 
-/*
 Problem:
 Given a number n, find the sum of the series:
 

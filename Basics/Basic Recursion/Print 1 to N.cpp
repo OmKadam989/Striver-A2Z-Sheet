@@ -1,8 +1,6 @@
 /* Problem link:
    https://www.geeksforgeeks.org/problems/print-1-to-n-without-using-loops-1587115620/1
-*/
 
-/*
 Problem:
 Given a number n, print numbers from 1 to n in increasing order without using any loops.
 
@@ -34,3 +32,4 @@ class Solution {
         print(n);
     }
 };
+     

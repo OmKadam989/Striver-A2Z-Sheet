@@ -1,8 +1,6 @@
 /* Problem link:
    https://www.geeksforgeeks.org/problems/print-gfg-n-times/1
-*/
 
-/*
 Problem:
 Given an integer N, print "GFG" N times without using any loops. 
 The solution must be implemented using recursion.
