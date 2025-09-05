@@ -1,40 +1,62 @@
-<h1 align="center">🚀 DSA Practice Hub</h1>
+<h1 align="center">🚀 DSA Mastery — Following Striver’s A2Z Sheet</h1>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif" width="250" alt="DSA Logo"/>
+  <img src="https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif" width="300" alt="DSA Journey"/>
 </p>
 
 <p align="center">
-  <b>My journey to master Data Structures & Algorithms through <a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Striver's A2Z DSA Sheet</a></b> 💻✨
+  <strong>Structured DSA Learning with Multiple Approaches 📚 — Every Problem Explained & Optimized</strong>
 </p>
 
 ---
 
-## ✨ About This Repo
-📌 This repository contains my **DSA practice solutions**.  
-Each problem includes:
-- ✅ Multiple Approaches (Brute Force → Optimal)  
-- ⏱️ Time & Space Complexity Analysis  
-- 🔗 Direct Problem Link (LeetCode / GFG)  
+##  About This Repository
 
-I’m documenting my progress step by step to **crack top product-based companies (FAANG)** 🚀  
+This repository chronicles my journey of mastering **Data Structures & Algorithms**, strictly following **[Striver’s A2Z DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)**.  
+Each problem solution includes:
 
----
-
-## 📂 Structure
-- **Arrays/** → Problems on arrays  
-- **Strings/** → String-related problems  
-- **Sorting/** → Sorting algorithms + problems  
-- **Searching/** → Searching techniques  
-- **More coming soon...**
+- Multiple approaches (e.g., Brute Force → Optimal)  
+- Clear Time & Space Complexity analysis  
+- Problem links for context and easy access
 
 ---
 
-## 📝 How I Document Problems
-For every problem:
-- Add **link to problem**  
-- Write **all approaches** I tried  
-- Mention **time & space complexity**  
-- Clean & readable code with comments  
+##  Usage Guide
 
-Example (format I’ll follow):
+- Browse by topic folders: `Arrays/`, `Searching/`, `Sorting/`, etc.  
+- Each file includes complete approach details and analysis.  
+- Use the documented Optimal solution for submissions, retain others for learning.
+
+---
+
+##  Progress Tracker
+
+- Basics           —  Completed  
+- Arrays           —  Ongoing  
+- Sorting          —  Upcoming  
+- Strings / Trees  —  To come
+
+<p align="center">
+  <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300" alt="Keep Going!"/>
+</p>
+
+---
+
+##  Why This Works
+
+- Follows a proven DSA roadmap  
+- Prioritizes clarity, not just code  
+- Ideal for quick review and pattern recognition  
+- Growing into a full-fledged DSA solution library
+
+---
+
+##  Ready to Dive In?
+
+- ⭐ **Star** this repo to follow my progress  
+- Handle a problem → document your best approach → repeat  
+- Let's ace DSA and FAANG interviews together!  
+
+---
+
+Made with ❤️ By a passionate learner.
