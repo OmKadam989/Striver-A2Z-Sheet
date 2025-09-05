@@ -1,11 +1,5 @@
 # 🚀 Striver's A2Z DSA Sheet  
 
-<p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*POhkA0o8K6x2-bIBy34lew.png" width="600" />
-</p>
-
----
-
 ## 📘 About  
 This repository contains my solutions for **[Striver’s A2Z DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)**.  
 I am solving each problem with **multiple approaches** (Brute Force → Optimized) and clearly mentioning the **Time & Space Complexity**.  
