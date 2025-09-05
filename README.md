@@ -28,9 +28,7 @@ I am solving each problem with **multiple approaches** (Brute Force → Optimize
 ---
 
 ## 🎯 Progress  
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=OmKadam989&theme=radical&hide_border=true" />
-</p>
+
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=OmKadam989&repo=Striver-A2Z-Sheet&theme=radical" />
