@@ -141,25 +141,4 @@ public:
     }
 };
 
-/*--------------------------------------------------------
-  🔹 Driver Code for Testing
---------------------------------------------------------*/
-int main() {
-    vector<int> nums = {3, 0, 1};
 
-    SolutionBrute s1;
-    SolutionSorting s2;
-    SolutionHashing s3;
-    SolutionSum s4;
-    SolutionXOR1 s5;
-    SolutionXOR2 s6;
-
-    cout << "Brute Force: " << s1.missingNumber(nums) << endl;
-    cout << "Sorting: " << s2.missingNumber(nums) << endl;
-    cout << "Hashing: " << s3.missingNumber(nums) << endl;
-    cout << "Sum Formula: " << s4.missingNumber(nums) << endl;
-    cout << "XOR (2 loops): " << s5.missingNumber(nums) << endl;
-    cout << "XOR (1 loop): " << s6.missingNumber(nums) << endl;
-
-    return 0;
-}
