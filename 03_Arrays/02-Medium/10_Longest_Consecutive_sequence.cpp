@@ -54,14 +54,50 @@ public:
 
 
 // ------------------------------------------------------
-// ✅ Approach 2: Optimal (Using Hash Set)
+// ✅ Approach 2: Sorting
+// ------------------------------------------------------
+/*
+Steps:
+1. Sort the array.
+2. Traverse and count consecutive elements (skip duplicates).
+3. Keep track of max streak.
+
+Time Complexity: O(n log n) → sorting  
+Space Complexity: O(1) → in-place
+*/
+class SolutionSorting {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        int n = nums.size();
+        if (n == 0) return 0;
+
+        sort(nums.begin(), nums.end());
+
+        int count = 1, maxiCount = 1;
+        for (int i = 0; i < n - 1; i++) {
+            if (nums[i] == nums[i + 1]) continue; // skip duplicates
+
+            if (nums[i] + 1 == nums[i + 1]) {
+                count++;  // consecutive
+            } else {
+                maxiCount = max(maxiCount, count);
+                count = 1; // reset streak
+            }
+        }
+        return max(maxiCount, count); // final check
+    }
+};
+
+
+// ------------------------------------------------------
+// ✅ Approach 3: Optimal (Using Hash Set)
 // ------------------------------------------------------
 /*
 Steps:
 1. Insert all numbers into an unordered_set for O(1) lookup.
 2. For each element, check if it is the start of a sequence 
-   (i.e., x-1 is not present).
-3. If yes, expand the sequence until numbers are consecutive.
+   (i.e., num-1 is not present).
+3. Expand the sequence until numbers are consecutive.
 4. Track the maximum length.
 
 Time Complexity: O(n)  
