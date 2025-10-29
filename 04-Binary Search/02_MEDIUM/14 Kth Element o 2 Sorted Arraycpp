@@ -1,0 +1,125 @@
+// 🔹 Problem: K-th Element of Two Sorted Arrays
+// https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
+//
+// Given two sorted arrays `a[]` (size m) and `b[]` (size n), and an integer k (1-based).
+// Find the element that would appear at the k-th position if you merged both arrays in sorted order.
+//
+// Example:
+// Input: a = [2, 3, 6, 7, 9], b = [1, 4, 8, 10], k = 5
+// Output: 6  (Merged array = [1,2,3,4,6,7,8,9,10], 5th element = 6)
+//
+// -------------------------------------------------------------
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// ---------------- Brute Force (Merge & Sort) ----------------
+// Approach:
+// 1. Combine both arrays into one.
+// 2. Sort the combined array.
+// 3. Return the (k-1)-index element (since 1-based k).
+//
+// Time Complexity: O((m + n) log(m + n))
+// Space Complexity: O(m + n)
+int kthElementBrute(const vector<int>& a, const vector<int>& b, int k) {
+    vector<int> combined;
+    combined.reserve(a.size() + b.size());
+    for (int x : a) combined.push_back(x);
+    for (int x : b) combined.push_back(x);
+    sort(combined.begin(), combined.end());
+    return combined[k - 1];
+}
+
+// ---------------- Better Approach (Merge Up to k) ----------------
+// Approach:
+// Simulate the merge step of two sorted arrays, but only up to the k-th element:
+// Use two pointers i and j, increment whichever array has the smaller current element,
+// count until you reach k, then return the current element.
+//
+// Time Complexity: O(k + 1)  (worst O(m + n) if k ~ m+n)
+// Space Complexity: O(1)
+int kthElementMergeLimited(const vector<int>& a, const vector<int>& b, int k) {
+    int i = 0, j = 0;
+    int m = a.size(), n = b.size();
+    int last = -1;
+    for (int count = 0; count < k; count++) {
+        if (i < m && (j >= n || a[i] <= b[j])) {
+            last = a[i];
+            i++;
+        } else {
+            last = b[j];
+            j++;
+        }
+    }
+    return last;
+}
+
+// ---------------- Optimal Approach (Binary Search on k) ----------------
+// Approach:
+// Use binary-search style on the smaller array for partitioning:
+// Consider picking `cutA` elements from array `a` and `cutB = k-cutA` from array `b` such that
+// all elements chosen from both arrays lie before the kth element, and check boundaries.
+//
+// Time Complexity: O(log(min(m, n)))
+// Space Complexity: O(1)
+int kthElementOptimal(const vector<int>& a, const vector<int>& b, int k) {
+    int m = a.size(), n = b.size();
+    // Ensure a is the smaller array
+    if (m > n) return kthElementOptimal(b, a, k);
+
+    int lo = max(0, k - n);      // at least k−n elements must be from a if b provides max n
+    int hi = min(k, m);
+
+    while (lo <= hi) {
+        int cutA = lo + (hi - lo) / 2;
+        int cutB = k - cutA;
+
+        int leftA = (cutA == 0 ? INT_MIN : a[cutA - 1]);
+        int leftB = (cutB == 0 ? INT_MIN : b[cutB - 1]);
+        int rightA = (cutA == m ? INT_MAX : a[cutA]);
+        int rightB = (cutB == n ? INT_MAX : b[cutB]);
+
+        if (leftA <= rightB && leftB <= rightA) {
+            return max(leftA, leftB);
+        }
+        if (leftA > rightB) {
+            hi = cutA - 1;
+        } else {
+            lo = cutA + 1;
+        }
+    }
+
+    // Fallback (shouldn't reach for valid input)
+    return -1;
+}
+
+// ---------------- Driver Code ----------------
+int main() {
+    vector<int> a = {2, 3, 6, 7, 9};
+    vector<int> b = {1, 4, 8, 10};
+    int k = 5;
+
+    cout << "[Brute]   → " << kthElementBrute(a, b, k) << endl;
+    cout << "[Better]  → " << kthElementMergeLimited(a, b, k) << endl;
+    cout << "[Optimal] → " << kthElementOptimal(a, b, k) << endl;
+
+    // Another test
+    vector<int> c = {1, 2, 2};
+    vector<int> d = {2, 3, 4};
+    int k2 = 4;
+    cout << "[Brute]   → " << kthElementBrute(c, d, k2) << endl;
+    cout << "[Better]  → " << kthElementMergeLimited(c, d, k2) << endl;
+    cout << "[Optimal] → " << kthElementOptimal(c, d, k2) << endl;
+
+    return 0;
+}
+
+/*
+Expected Output:
+[Brute]   → 6
+[Better]  → 6
+[Optimal] → 6
+[Brute]   → 2
+[Better]  → 2
+[Optimal] → 2
+*/
