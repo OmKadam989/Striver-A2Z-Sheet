@@ -40,3 +40,15 @@ I am solving each problem with **multiple approaches** (Brute Force → Optimize
 ---
 
 <p align="center">⭐ If you like this repo, don’t forget to star it! ⭐</p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [0260-single-number-iii](https://github.com/OmKadam989/Striver-A2Z-Sheet/tree/master/0260-single-number-iii) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0260-single-number-iii](https://github.com/OmKadam989/Striver-A2Z-Sheet/tree/master/0260-single-number-iii) |
+<!---LeetCode Topics End-->
